@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Scraping Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  <div class="image-container">
+    {% for image_url in image_urls %}
+    <div class="image-item">
+      <img src="{{ image_url }}" alt="Image {{ loop.index }}">
+      </div>
+    {% endfor %}
+  </div>
+
+</body>
+
+</html>
